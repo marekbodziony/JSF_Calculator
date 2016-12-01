@@ -74,15 +74,15 @@ public class Calculator {
 	}
 	// add 
 	public void add(){
-		if (action.equals("equals")){ a = result;}
+		if (action.equals("equals") || !action.equals("")){ a = result;}
 		action="add";
 		b = a;
 		result = a;
-		a = "0";		
+		a = "0";
 	}
 	// subtraction
 	public void sub(){
-		if (action.equals("equals")){ a = result;}
+		if (action.equals("equals") || !action.equals("")){ a = result;}
 		action="sub";
 		b = a;
 		result = a;
@@ -90,7 +90,7 @@ public class Calculator {
 	}
 	// multiplication
 	public void multi(){
-		if (action.equals("equals")){ a = result;}
+		if (action.equals("equals") || !action.equals("")){ a = result;}
 		action="multi";
 		b = a;
 		result = a;
@@ -98,7 +98,7 @@ public class Calculator {
 	}
 	// division
 	public void divi(){
-		if (action.equals("equals")){ a = result;}
+		if (action.equals("equals") || !action.equals("")){ a = result;}
 		action="divi";
 		b = a;
 		result = a;
@@ -106,15 +106,22 @@ public class Calculator {
 	}
 	// sqrt
 	public void sqrt(){
-		if (action.equals("equals")){ a = result;}
+		if (action.equals("equals") || !action.equals("")){ a = result;}
 		action = "sqrt";
 		equals();
 	}
 	// change sign
 	public void sign(){
 		if (action.equals("equals")){ a = result;}
-		action = "sign";
-		equals();
+		if (!action.equals("")){
+			float s = Float.parseFloat(a) * (-1);
+			a = "" + s;
+			result = a;
+		}
+		else{
+			action = "sign";
+			equals();
+		}		
 	}
 	// percent
 	public void percent(){

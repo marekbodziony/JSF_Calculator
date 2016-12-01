@@ -15,8 +15,7 @@
 <h:form>
 <table class="table">
 <tr>
-	<td>++++</td>
-	<td colspan="3" class="result">#{calc.result}</td>
+	<td colspan="4" class="result">#{calc.result}</td>
 	<td><h:commandButton action="#{calc.cancel()}" value="C" class="button"/></td>
 </tr>
 <tr>
@@ -51,9 +50,9 @@
 <br/><br/><br/>
 <table >
 <tr>
+<td class="infoTable">b = #{calc.b}</td>
 <td class="infoTable">a = #{calc.a}</td>
 <td class="infoTable">akcja = #{calc.getAction()}</td>
-<td class="infoTable">b = #{calc.b}</td>
 <td class="infoTable">wynik = #{calc.result}</td>
 </tr>
 </table>
