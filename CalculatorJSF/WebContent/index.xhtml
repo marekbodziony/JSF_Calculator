@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>JSF Calculator</title>
+<link href="./styles.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<h:body style="background-color:#{calc.pageBackgroundColor}">
+<div align="center">
+<h1>JSF Calculator</h1>
+
+<h:form>
+<table class="table">
+<tr>
+	<td colspan="4" class="result">#{calc.result}</td>
+	<td><h:commandButton action="#{calc.cancel()}" value="C" class="button"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calc.setA(7)}"  value="7" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.setA(8)}" value="8" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.setA(9)}" value="9" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.divi()}" value="/" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.sqrt()}" value="sqrt" class="button" disabled="#{calc.hide}"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calc.setA(4)}" value="4" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.setA(5)}"  value="5" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.setA(6)}" value="6" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.multi()}" value="*" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton value="%" class="button" disabled="#{calc.hide}"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calc.setA(1)}" value="1" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.setA(2)}" value="2" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.setA(3)}" value="3" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.sub()}" value="-" class="button" disabled="#{calc.hide}"/></td>
+	<td rowspan="2"><h:commandButton action="#{calc.equals()}" value="=" class="equalButton" disabled="#{calc.hide}"/></td>
+</tr>
+<tr>
+	<td><h:commandButton action="#{calc.setA(0)}" value="0" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.setA('.')}" value="," class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.sign()}" value="+/-" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.add()}" value="+" class="button" disabled="#{calc.hide}"/></td>
+</tr>
+</table>
+<h:commandLink action="settings?faces-redirect=true" value="zmiana ustawień"/>
+<br/><br/><br/>
+<table >
+<tr>
+<td class="infoTable">a = #{calc.a}</td>
+<td class="infoTable">akcja = #{calc.getAction()}</td>
+<td class="infoTable">b = #{calc.b}</td>
+<td class="infoTable">wynik = #{calc.result}</td>
+</tr>
+</table>
+
+</h:form>
+</div>
+</h:body>
+
+</html>

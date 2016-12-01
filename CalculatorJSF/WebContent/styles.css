@@ -1,0 +1,38 @@
+body{
+	background-color: pink;
+	
+}
+table{
+	background-color: white;
+	border: 1px solid black;
+	text-align: right;
+}
+td{
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background-color: silver;
+}
+.button{
+	width: 40px;
+	height: 40px;
+}
+.equalButton{
+	width: 40px;
+	height: 83px;
+}
+.result{
+	height: 35px;
+	background-color:#B4D9F9;
+	font-size: 22px;
+	text-align: right;
+	border: 0px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.infoTable{
+	width: 100px;
+	background-color: white;
+	border: none;
+	text-align: left;
+}
