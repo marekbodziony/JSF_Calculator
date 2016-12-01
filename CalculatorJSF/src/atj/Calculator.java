@@ -31,7 +31,7 @@ public class Calculator {
 	}
 
 	public void setA(String a) {
-		if (this.a.length() == 1 && this.a.substring(0, 1).equals("0") && !a.equals(".")) {this.a = "";}		// delete first "0" from String
+		if (this.a.length() == 1 && this.a.substring(0, 1).equals("0") && !a.equals(".")) {this.a = "";}	// delete first "0" from String
 		if (a.equals(".") && this.a.contains(".")) {a = "";}												// if user select "," second time do nothing
 		if (action.equals("equals")){
 			this.a = "";
@@ -115,6 +115,14 @@ public class Calculator {
 		if (action.equals("equals")){ a = result;}
 		action = "sign";
 		equals();
+	}
+	// percent
+	public void percent(){
+		if (action.equals("multi")){
+			float p = Float.parseFloat(b) * Float.parseFloat(a) * 0.01f;
+			result = "" + p;
+			action = "equals";
+		}
 	}
 	// equals
 	public void equals(){

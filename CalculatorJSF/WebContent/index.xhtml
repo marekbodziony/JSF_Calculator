@@ -15,7 +15,8 @@
 <h:form>
 <table class="table">
 <tr>
-	<td colspan="4" class="result">#{calc.result}</td>
+	<td>++++</td>
+	<td colspan="3" class="result">#{calc.result}</td>
 	<td><h:commandButton action="#{calc.cancel()}" value="C" class="button"/></td>
 </tr>
 <tr>
@@ -30,7 +31,7 @@
 	<td><h:commandButton action="#{calc.setA(5)}"  value="5" class="button" disabled="#{calc.hide}"/></td>
 	<td><h:commandButton action="#{calc.setA(6)}" value="6" class="button" disabled="#{calc.hide}"/></td>
 	<td><h:commandButton action="#{calc.multi()}" value="*" class="button" disabled="#{calc.hide}"/></td>
-	<td><h:commandButton value="%" class="button" disabled="#{calc.hide}"/></td>
+	<td><h:commandButton action="#{calc.percent()}" value="%" class="button" disabled="#{calc.hide}"/></td>
 </tr>
 <tr>
 	<td><h:commandButton action="#{calc.setA(1)}" value="1" class="button" disabled="#{calc.hide}"/></td>
